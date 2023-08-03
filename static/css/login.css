@@ -1,0 +1,62 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.mydiv{
+    
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        width:30em;
+        height:18em;
+        margin-top: -9em; /*set to a negative number 1/2 of your height*/
+        margin-left: -15em; /*set to a negative number 1/2 of your width*/
+        border: 1px solid #ccc;
+        background-color: #f3f3f3;
+}
+
+
+body {
+    background: rgb(217, 226, 226)
+}
+
+.row {
+    background: white;
+    border-radius: 30px;
+    box-shadow: 12px 12px 22px grey;
+}
+
+img {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    height: 500px;
+}
+
+.btn1 {
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn1:hover {
+    background: white;
+    border: 1px solid;
+    color: black;
+}
+
+.form-row {
+    display: block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.forgot {
+    padding-left: 5px;
+}

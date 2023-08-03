@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel=stylesheet type=text/css href="/static/css/Home.css">
+    <link rel="stylesheet" href="/static/css/Home.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;500&family=Roboto:ital,wght@0,300;0,500;0,700;1,500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Recommendation</title>
+</head>
+<body style="background: rgb(217, 226, 226)">
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 border-bottom">
+    <p style="  font-size: 30px;" class=" navText text-light">Book Recommender System</p>
+    <nav class=" navText navbar navbar-brand d-inline-flex mt-2 mt-md-0 ms-md-auto">
+      <a class=" me-3 py-2 text-light" href="Home" target="_blank">Home</a>
+      <a class="me-3 py-2 text-light" href="Top_Books" target="_blank">Top Books</a>
+      <a class="me-3 py-2 text-light" href="Recommend" target="_blank">Recommended</a>
+      <a class="me-3 py-2 text-light" href="About" target="_blank">About us</a>
+    </nav>
+    <a href="/logout" class=" navText me-3 py-2 text-light navbar navbar-brand"> Logout </a>
+  </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="txtColor" style="font-size:50px">Recommend Books</h1>
+                <form action="/recommend_books" method="post">
+                    <input name="user_input" type="text" class="form-control"><br>
+                    <input type="submit" class="btn btn-lg btn-warning">
+                </form>
+            </div>
+
+            {% if data %}
+
+             {% for i in data %}
+                <div class="col-md-3" style="margin-top:50px font-family: 'Radium Corp', sans-serif;">
+                    <div class="card">
+                        <div class="card-body">
+                            <img class="card-img-top" src="{{i[2]}}">
+                            <h5 class="text-black">{{i[0]}}</h5>
+                            <h6 class="text-black">{{i[1]}}</h6>
+                        </div>
+                    </div>
+                </div>
+             {% endfor %}
+
+            {% endif %}
+
+
+
+        </div>
+    </div>
+</body>
+</html>
